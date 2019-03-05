@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo ''
-echo 'Proteus Kiosk updater'
+echo 'Porteus Kiosk updater'
 echo ''
 
 if [ "$(id -u)" != "0" ]; then
