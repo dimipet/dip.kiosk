@@ -115,9 +115,17 @@ This is a key/value file with a TAB between key and value.
 ** When editing be careful ** 
 There is a one single space between each key (e.g. `tmp_folder`) and its value (e.g. `/tmp/porteus`). 
 This single space is a TAB hidden character used as a delimiter between keys and their values.
-If in doubt use a descent text editor (notepad++, atom, vim [see here](http://www.chrispian.com/quick-vi-tip-show-hidden-characters/) that can show hidden control characters. Below I use `nano` but take care not to delete anything
+If in doubt use a descent text editor (notepad++, atom, vim [see here](http://www.chrispian.com/quick-vi-tip-show-hidden-characters/) that can show hidden control characters. Below I use `nano` but take care not to delete anything.
+
+First things first: make a copy of your properties sample file
+
+	$ cp -p ~/Desktop/dip.kiosk/updateKioskCloud.properties.sample ~/Desktop/dip.kiosk/updateKioskCloud.properties
+
+Now edit your file
 
 	$ nano ~/Desktop/dip.kiosk/updateKioskCloud.properties
+
+You should see the following content, edit it to suit your needs, again make sure not to delete TABs
 
 ~~~~
 isoCD_filename	Porteus-Kiosk.iso
@@ -140,10 +148,14 @@ $ ms5sum Porteus-Kiosk.iso
 * Set `isoCD_MD5` with the MD5 value found above 
 
 * In case you don't install on `/dev/sda2`, set `target_partition` to your desired target partition
-* Upload your `updateKioskCloud.properties` to a Google shared folder
-* When `updateKioskCloud.properties` has uploaded, left click the file and "Get Sharable link", e.g. `https://drive.google.com/open?id=1Aa1oKJ6df89phsuOIa7sUGDoRVSqoP9Q`
+* Upload your `updateKioskCloud.properties` to a Google shared folder and make sure you uploaded it correclty, use (connect) an online text editor for that like AnyFile
+* Delete your local `updateKioskCloud.properties` file, you wont need it anymore, you should be editing with extra care from now the file online, as the online properties file is the file that the script uses
 
-## 7. dip.kiosk: edit `updateKioskCloud.sh` edit##
+	$ rm ~/Desktop/dip.kiosk/updateKioskCloud.properties
+	
+* Head to your uploaded `updateKioskCloud.properties` file, left click it and "Get Sharable link", a link like the following should be copied to your clipboard e.g. `https://drive.google.com/open?id=1Aa1oKJ6df89phsuOIa7sUGDoRVSqoP9Q`
+
+## 7. dip.kiosk: edit `updateKioskCloud.sh` edit
 * Edit the script `updateKioskCloud.sh`, 
 	
 	$ nano ~/Desktop/dip.kiosk/updateKioskCloud.sh
