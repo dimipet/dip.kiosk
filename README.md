@@ -223,4 +223,4 @@ $ sudo updateKioskCloud.sh
 
 ## License
 
-Each library is released under its own license. This adjusticeKiosk repository is published under [GNU/GPL Version 3](LICENSE).
+Each library is released under its own license. This repository is published under [GNU/GPL Version 3](LICENSE).
