@@ -41,23 +41,31 @@ Below we show draftly how to build a Lubuntu 18 x64 and prepare it for Porteus K
 ## 2. Lubuntu 18 x64: dual boot preperation
 * Boot to Lubuntu
 * Install the following
-	
-	$ sudo apt-get install syslinux, git
-	$ sudo apt-get install syslinux-utils
+
+~~~~	
+$ sudo apt-get install syslinux, git
+$ sudo apt-get install syslinux-utils
+~~~~
 
 * Install `openssh-server` and start it
 
-	$ sudo apt-get install openssh-server
-	$ sudo service ssh restart
-	
+~~~~
+$ sudo apt-get install openssh-server
+$ sudo service ssh restart
+~~~~	
+
 * Maybe you need to allow your `ufw` to accept `ssh` incoming requests
 
-	$ sudo ufw allow ssh
+~~~~
+$ sudo ufw allow ssh
+~~~~
 
 * Edit custom `GRUB2` config files, check `--id` you assign. You will need it to set your default boot OS
 
-	$ sudo nano /etc/grub.d/40_custom
-	
+~~~~
+$ sudo nano /etc/grub.d/40_custom
+~~~~
+
 * Add the `GRUB2` menuentry below at the end of the file and save
 
 ~~~~
@@ -71,7 +79,9 @@ menuentry "Porteus-Kiosk-hybrid.iso" --id porteus-kiosk-hybrid-iso {
 
 * Edit your `GRUB2` defaults 
 
-	$ sudo nano /etc/default/grub
+~~~~
+$ sudo nano /etc/default/grub
+~~~~
 
 * Set your default boot, use the `--id` value above
 
@@ -81,8 +91,9 @@ GRUB_DEFAULT=porteus-kiosk-hybrid-iso
 
 * Update your `GRUB2` boot loader
 
-	$ sudo update-grub2
-
+~~~~
+$ sudo update-grub2
+~~~~
 
 ## 3. Porteus Kiosk 4.8.0 x64: ISO image creation
 The ISO image creation can vary from case to case (due to different functional requirements), from system to system (due to non-functional requirements). As such it is out of scope of this document to explain how you should build your *own* system. It is implied that *you know exactly how to create a USB or CD with a running Porteus Kiosk*. Play around and create it, Porteus Kioks wizard is self-explanatory  and you will have no problem, if different Google and use Porteus fantastic community.
