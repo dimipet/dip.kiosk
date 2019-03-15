@@ -52,7 +52,7 @@ $ sudo apt-get install syslinux-utils
 ~~~~
 $ sudo apt-get install openssh-server
 $ sudo service ssh restart
-~~~~	
+~~~~
 
 * Maybe you need to allow your `ufw` to accept `ssh` incoming requests
 
@@ -116,9 +116,11 @@ Please find below listed the main steps to follow along with some links to read/
 ## 5. dip.kiosk: script(s) download
 Run the following 
 
-	$ cd ~/Desktop
-	$ git clone https://github.com/dimipet/dip.kiosk.git
-	$ chmod u+x ~/Desktop/dip.kiosk/updateKioskCloud.sh
+~~~~
+$ cd ~/Desktop
+$ git clone https://github.com/dimipet/dip.kiosk.git
+$ chmod u+x ~/Desktop/dip.kiosk/updateKioskCloud.sh
+~~~~
 
 ## 6. dip.kiosk: `updateKioskCloud.properties` edit and upload
 
@@ -130,11 +132,15 @@ If in doubt use a descent text editor (notepad++, atom, vim [see here](http://ww
 
 First things first: make a copy of your properties sample file
 
-	$ cp -p ~/Desktop/dip.kiosk/updateKioskCloud.properties.sample ~/Desktop/dip.kiosk/updateKioskCloud.properties
+~~~~
+$ cp -p ~/Desktop/dip.kiosk/updateKioskCloud.properties.sample ~/Desktop/dip.kiosk/updateKioskCloud.properties
+~~~~
 
 Now edit your file
 
-	$ nano ~/Desktop/dip.kiosk/updateKioskCloud.properties
+~~~~
+$ nano ~/Desktop/dip.kiosk/updateKioskCloud.properties
+~~~~
 
 You should see the following content, edit it to suit your needs, again make sure not to delete TABs
 
@@ -162,14 +168,18 @@ $ ms5sum Porteus-Kiosk.iso
 * Upload your `updateKioskCloud.properties` to a Google shared folder and make sure you uploaded it correclty, use (connect) an online text editor for that like AnyFile
 * Delete your local `updateKioskCloud.properties` file, you wont need it anymore, you should be editing with extra care from now the file online, as the online properties file is the file that the script uses
 
-	$ rm ~/Desktop/dip.kiosk/updateKioskCloud.properties
-	
+~~~~
+$ rm ~/Desktop/dip.kiosk/updateKioskCloud.properties
+~~~~
+
 * Head to your uploaded `updateKioskCloud.properties` file, left click it and "Get Sharable link", a link like the following should be copied to your clipboard e.g. `https://drive.google.com/open?id=1Aa1oKJ6df89phsuOIa7sUGDoRVSqoP9Q`
 
 ## 7. dip.kiosk: edit `updateKioskCloud.sh` edit
 * Edit the script `updateKioskCloud.sh`, 
 	
-	$ nano ~/Desktop/dip.kiosk/updateKioskCloud.sh
+~~~~
+$ nano ~/Desktop/dip.kiosk/updateKioskCloud.sh
+~~~~
 
 * Find the line `google_properties_link="https://drive.google.com/open?id=1dFfAw9tm95ok0JTskyvt6Lsl8y1NHMDT"` 
 * Delete the whole link between the two double quotes
@@ -179,14 +189,15 @@ You should now see something like the following (but with your own copied link)
 
 ~~~~
 google_properties_link="https://drive.google.com/open?id=1Aa1oKJ6df89phsuOIa7sUGDoRVSqoP9Q"
-
 ~~~~
 
 ## 8. dip.kiosk: install Porteus Kiosk
 * Run
 
-	$ sudo nano ~/Desktop/dip.kiosk/updateKioskCloud.sh
-	
+~~~~
+$ sudo nano ~/Desktop/dip.kiosk/updateKioskCloud.sh
+~~~~
+
 The script will 
 * download `updateKioskCloud.properties`, 
 * read its values, 
@@ -206,8 +217,9 @@ You decide that you need to update your your kiosk.
 * Have someone to hold SHIFT keyboard key (after POST before `GRUB2` menu shows up) and select to boot Lubuntu
 * `ssh` to Lubuntu and run as step 8 above
 
-	$ sudo updateKioskCloud.sh
-
+~~~~
+$ sudo updateKioskCloud.sh
+~~~~
 
 ## License
 
