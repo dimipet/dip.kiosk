@@ -174,7 +174,7 @@ $ rm ~/Desktop/dip.kiosk/updateKioskCloud.properties
 
 * Head to your uploaded `updateKioskCloud.properties` file, left click it and "Get Sharable link", a link like the following should be copied to your clipboard e.g. `https://drive.google.com/open?id=1Aa1oKJ6df89phsuOIa7sUGDoRVSqoP9Q`
 
-## 7. dip.kiosk: edit `updateKioskCloud.sh` edit
+## 7. dip.kiosk: edit `updateKioskCloud.sh`
 * Edit the script `updateKioskCloud.sh`, 
 	
 ~~~~
