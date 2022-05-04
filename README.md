@@ -1,7 +1,7 @@
 # dip.kiosk
 
 ## Introduction
-dip.kiosk is a guide and script(s), that demonstrate a way to build a **dual boot kiosk system** with Lubuntu 18 x64 and Porteus Kiosk 4.8.0 x64 which can be administered and updated through cloud storage (Google Drive). **Triple boot** (or more) can be supported with light modifications, as long as: the second OS is Lubuntu and third is Porteus Kiosk (e.g. first OS: Microsoft Windows). 
+dip.kiosk is a guide and script(s), that demonstrate a way to build a **dual boot kiosk system** with Lubuntu 18 x64 linux distro and Porteus Kiosk 4.8.0 x64 linux distro which can be administered and updated through cloud storage (Google Drive). **Triple boot** (or more) can be supported with light modifications, as long as: the second OS is Lubuntu and third is Porteus Kiosk (e.g. first OS: Microsoft Windows). 
 
 In this guide we use [Google Drive](https://www.google.com/drive/) as our storage source.
 [Lubuntu](https://lubuntu.net/) is a full featured lightweight linux distro running on low end hardware. [Porteus Kiosk](https://porteus-kiosk.org/) is a fantastic solution for kiosks running on low end hardware too and its web site provides all the details to build a kiosk. Both distros have a great community and as such they make an ideal choice to build a **hard disk driven, dual boot kiosk** system. 
